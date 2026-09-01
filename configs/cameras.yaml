@@ -1,0 +1,29 @@
+cameras:
+  - id: "CAM-001"
+    name: "VIRAT Test Camera 01"
+    source: "data/videos/virat/VIRAT_S_000001.mp4"
+    location: "BOP-TEST-01"
+    resolution: "1920x1080"
+    fps: 30
+    is_active: true
+  - id: "CAM-002"
+    name: "VIRAT Test Camera 02"
+    source: "data/videos/virat/VIRAT_S_000002.mp4"
+    location: "BOP-TEST-02"
+    resolution: "1920x1080"
+    fps: 30
+    is_active: true
+  - id: "CAM-003"
+    name: "VIRAT Test Camera 03"
+    source: "data/videos/virat/VIRAT_S_000003.mp4"
+    location: "BOP-TEST-03"
+    resolution: "1920x1080"
+    fps: 30
+    is_active: true
+  - id: "CAM-004"
+    name: "VIRAT Test Camera 04"
+    source: "data/videos/virat/VIRAT_S_000004.mp4"
+    location: "BOP-TEST-04"
+    resolution: "1920x1080"
+    fps: 30
+    is_active: true

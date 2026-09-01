@@ -1,0 +1,6 @@
+anpr:
+  enabled: true
+  process_interval_frames: 5
+  required_hits: 3
+  consensus_ratio: 0.6
+  retention_days: 30

@@ -1,0 +1,195 @@
+# ====================================================================
+# IBVAP - Integrated Border Surveillance & Threat Assessment Platform
+# .gitignore
+# ====================================================================
+
+# --------------------------------------------------------------------
+# Environment Secrets, Credentials & Sensitive Files
+# --------------------------------------------------------------------
+.env
+.env.*
+!.env.example
+login.txt
+credentials/
+secrets/
+*.pem
+*.key
+*.cert
+*.crt
+
+# --------------------------------------------------------------------
+# Databases & SQLite Artifacts
+# --------------------------------------------------------------------
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+*.db-wal
+*.db-shm
+*.dump
+*.backup
+*.bak
+*.sql
+ibvap.db
+empty.db
+backend/empty.db
+data/database/*
+!data/database/README.md
+
+# --------------------------------------------------------------------
+# Video & Media Data (Large Surveillance Recordings & Evidence Clips)
+# --------------------------------------------------------------------
+data/videos/*
+!data/videos/README.md
+data/evidence/*
+!data/evidence/README.md
+/evidence/
+/snapshots/
+/clips/
+/recordings/
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.webm
+*.flv
+*.wmv
+*.m4v
+*.mts
+*.m2ts
+*.ts
+
+# --------------------------------------------------------------------
+# Benchmark Datasets & Results (RF-DETR tables, dataset splits, metrics)
+# --------------------------------------------------------------------
+benchmark/images/
+benchmark/results/
+benchmark/annotations/prelabels/
+benchmark/rfdetr_dataset/
+rfdetr_dataset/
+
+# --------------------------------------------------------------------
+# AI / ML Model Weights, Checkpoints & Pretrained Models
+# --------------------------------------------------------------------
+*.pt
+*.pth
+*.pwf
+*.onnx
+*.engine
+*.tflite
+*.weights
+*.bin
+*.safetensors
+*.pkl
+*.pickle
+*.h5
+*.keras
+*.ckpt
+
+# Model download & storage caches
+app/data/
+backend/data/
+weights/
+checkpoints/
+models/*
+!models/README.md
+
+# --------------------------------------------------------------------
+# Training Runs, TensorBoard Events, Experiments & Logs
+# --------------------------------------------------------------------
+output/
+runs/
+lightning_logs/
+events.out.tfevents.*
+wandb/
+*.log
+logs/
+
+# --------------------------------------------------------------------
+# Python Environment, Bytecode & Packaging Artifacts
+# --------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# Testing, Type Checking & Linting Caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.hypothesis/
+.coverage
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.tox/
+.nox/
+htmlcov/
+
+# --------------------------------------------------------------------
+# Frontend, Node & Web Build Artifacts
+# --------------------------------------------------------------------
+node_modules/
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+.turbo/
+.cache/
+
+# --------------------------------------------------------------------
+# OS Specific Files & IDE Configurations
+# --------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+.idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+*.sublime-workspace
+*.sublime-project
+*.swp
+*.swo
+*~

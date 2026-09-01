@@ -1,0 +1,21 @@
+{
+  "name": "ibvap",
+  "version": "1.0.0",
+  "private": true,
+  "description": "IBVAP - Intelligent Border Video Analytics Platform",
+  "type": "module",
+  "scripts": {
+    "start": "node scripts/ensure-docker.js && concurrently -k -n \"BACKEND,FRONTEND\" -c \"blue.bold,cyan.bold\" \"npm run start:backend\" \"npm run start:frontend\"",
+    "dev": "node scripts/ensure-docker.js && concurrently -k -n \"BACKEND,FRONTEND\" -c \"blue.bold,cyan.bold\" \"npm run start:backend\" \"npm run start:frontend\"",
+    "start:docker": "docker-compose up -d postgres redis mediamtx",
+    "start:backend": "node scripts/start-backend.js",
+    "start:frontend": "npm --prefix frontend run dev",
+    "dev:backend": "node scripts/start-backend.js",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "build": "npm --prefix frontend run build",
+    "install:all": "npm install && npm --prefix frontend install"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}

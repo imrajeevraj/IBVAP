@@ -1,0 +1,12 @@
+plates:
+  - plate: "AB12CD34"
+    name: "Stolen Vehicle (Test)"
+    risk_level: "HIGH"
+    notes: "Reported stolen in Test City on 2026-08-20"
+  - plate: "XYZ999"
+    name: "Person of Interest (Test)"
+    risk_level: "CRITICAL"
+    notes: "Wanted for questioning"
+  - plate: "TEST01"
+    name: "Test Plate 01"
+    risk_level: "MEDIUM"

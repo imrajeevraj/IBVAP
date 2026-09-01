@@ -1,0 +1,30 @@
+# Git & System
+.git
+.gitignore
+.github
+.agents
+.gemini
+.vscode
+.idea
+
+# Node / Frontend
+node_modules
+frontend/node_modules
+frontend/dist
+
+# Python & Caches
+.venv
+venv
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache
+.coverage
+htmlcov
+
+# Logs & Temporary Files
+*.log
+scratch/
+test_output.jpg
+login.txt

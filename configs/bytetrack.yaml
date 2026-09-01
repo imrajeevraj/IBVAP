@@ -1,0 +1,13 @@
+# ByteTrack tracker configuration for overlapping border environments
+# Adapted from default ultralytics config for dense environments
+
+tracker_type: bytetrack
+track_high_thresh: 0.5    # Higher threshold for better isolation (default: 0.5)
+track_low_thresh: 0.1     # Keep low threshold strict (default: 0.1)
+new_track_thresh: 0.6     # Need high confidence to spawn a new track (default: 0.6)
+track_buffer: 60          # 60 frames (1-2 seconds) memory for occlusions (default: 30)
+match_thresh: 0.8         # Less strict matching to allow shape variation over distance (default: 0.8)
+
+# ByteTrack-specific parameters
+fuse_score: True
+gmc_method: sparseOptFlow # Use optical flow to compensate for camera shake/noise (default: sparseOptFlow)

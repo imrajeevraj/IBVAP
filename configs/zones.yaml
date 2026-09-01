@@ -1,0 +1,22 @@
+zones:
+  "CAM-001":
+    restricted_zones:
+      - id: "zone_cam001_restricted"
+        name: "Immediate Border Area"
+        polygon: [[100, 300], [1800, 300], [1800, 1000], [100, 1000]]
+    virtual_fences:
+      - id: "fence_cam001_main"
+        name: "Zero Line Fence"
+        line: [[200, 500], [1700, 500]]
+  "CAM-002":
+    restricted_zones:
+      - id: "zone_cam002_restricted"
+        name: "No-Mans Land"
+        polygon: [[100, 200], [1800, 200], [1800, 1000], [100, 1000]]
+    virtual_fences: []
+  "CAM-003":
+    restricted_zones: []
+    virtual_fences: []
+  "CAM-004":
+    restricted_zones: []
+    virtual_fences: []

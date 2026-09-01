@@ -1,0 +1,61 @@
+risk:
+  # Object type weights
+  weights:
+    person: 20
+    vehicle: 15
+
+    # Event type weights
+    restricted_zone_entry: 30
+    zone_exit: 5
+    virtual_fence_crossing: 25
+    drone_detected: 80
+    weapon_detected: 85
+    contraband_detected: 60
+    crawling_detected: 40
+    loitering_detected: 30
+    platoon_detected: 75
+    unknown_face: 50
+
+    # Direction weights
+    inward_direction: 15
+    outward_direction: 5
+
+    # Context weights
+    night_time: 10
+    
+    # Watchlist context
+    watchlist_match: 40
+
+  # Night-time context configuration
+  night:
+    enabled: true
+    start: "22:00"
+    end: "05:00"
+    # Timezone for night-time evaluation. Uses system local time if not set.
+    # Examples: "UTC", "Asia/Kolkata", "US/Eastern"
+    timezone: "UTC"
+
+  # Severity thresholds (score boundaries, inclusive)
+  severity:
+    low:
+      min: 0
+      max: 30
+    medium:
+      min: 31
+      max: 60
+    high:
+      min: 61
+      max: 80
+    critical:
+      min: 81
+      max: 100
+
+  # Zone-specific risk weight overrides
+  # When a zone ID is listed here with a non-null risk_weight,
+  # that weight replaces the default event-type weight for events in that zone.
+  # Zone IDs reference zones.yaml entries — no geometry duplication.
+  zones:
+    # zone_cam001_restricted:
+    #   risk_weight: 35
+    # zone_cam002_restricted:
+    #   risk_weight: 50

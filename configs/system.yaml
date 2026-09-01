@@ -1,0 +1,12 @@
+system:
+  app_name: "IBVAP"
+  environment: "development"
+  debug: true
+  stream_settings:
+    frame_skip: 1
+    max_fps: 30
+    mjpeg_quality: 70
+  inference:
+    device: "cuda"
+    conf_threshold: 0.25
+    model_name: "C:/Users/rajee/runs/detect/border_threat_detection-3/weights/best.pt"
